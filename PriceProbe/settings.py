@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gv7w@+5*armmpjc!3#&3tm6l(f6d_p-o4uf8av*si3z2n)#@#-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["priceprobe-dcf5c69702cd.herokuapp.com","127.0.0.1:8001"]
+ALLOWED_HOSTS = ["priceprobe-dcf5c69702cd.herokuapp.com","127.0.0.1"]
 DEFAULT_PORT = '8001'
 
 
@@ -156,6 +156,14 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 '''
+
+    send_mail(
+        "Make appointment",
+        "Here is the message.",
+        "4watching1209@gmail.com",
+        ["chessfor51@gmail.com"],
+        fail_silently=False,
+    )
 
 EMAIL_HOST = 'smtp.your-email-provider.com'  # e.g., smtp.gmail.com for Gmail
 EMAIL_HOST_USER = 'your-email@example.com'
