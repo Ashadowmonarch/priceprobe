@@ -1,0 +1,587 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+    --twentyTextFade: rgba(0,0,0,0.2);
+    --secondaryContainer: #D9E3F9; 
+    --focusedSecondaryContainer: #3F5F90;
+    --usernameTextColor: #353535;
+    --searchBarIconBackground: #6F6F6F;
+    --productPriceGrey: #505050;
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.sideBar{
+    width: 200px;
+    max-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    padding: 30px 0px 16px 0px;
+}
+.companyLogoAndNavigationContainer{
+    width: 168px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 39px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.companyLogoImageIpad{
+    display: none;
+}
+.companyLogo{
+    width: 91px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 91px;
+    height: 44px;
+    object-fit: cover;
+}
+.navigationItemsContainer{
+   row-gap: 10px;
+   width: 168px;
+   height: 410px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+   margin: 0;
+   box-sizing: border-box;
+}
+.navigationItem{
+   width: 168px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   column-gap: 13px;
+   margin: 0;
+   box-sizing: border-box;
+   color: var(--secondaryGrey);
+   font-family: "Inter";
+   font-weight: 900;
+   font-size: 12px;
+   letter-spacing: 4%;
+   border-radius: 10px;
+   background-color: rgba(255, 255, 255, 0);
+   transition: background-color 0.3s ease;
+   cursor: pointer;
+   padding-left: 28px;
+}
+.navigationItem:hover{
+    background-color: var(--secondaryContainer);
+}
+.navigationItem:nth-child(2){
+    background-color: var(--focusedSecondaryContainer);
+    color: var(--textColorWhite);
+}
+.icon-large{
+    font-size: 32px;
+}
+.accountProfileContainer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 168px;
+   height: 61px;
+   border-top: 2px solid var(--twentyTextFade);
+   overflow: hidden;
+   margin: 0;
+   box-sizing: border-box;
+   column-gap: 8px;
+   background-color: var(--backgroundColor);
+   cursor: pointer;
+}
+.accountProfilePictureContainer{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountProfilePicture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.accountUsername{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--usernameTextColor);
+    width: 86px;
+    height: 19px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.mainPageContainer{
+    width: calc(100% - 200px);
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+.topHeaderSection{
+    width: 832px;
+    height: 229px;
+    row-gap: 42px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 90px;
+}
+.topHeaderSectionText{
+    width: 511px;
+    height: 119px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-family: "Roboto";
+    font-weight: 600;
+    letter-spacing: -0.25px;
+    line-height: 64px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.topHeaderSectionText:nth-child(2){
+    margin-top: -65px;
+}
+.highlightedText{
+    color: var(--buttonBlue);
+    margin-left: 20px;
+}
+.searchBarContainer{
+    width: 70vw;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 40px;
+    border: 2px solid var(--twentyTextFade);
+}
+.searchBar{
+    width: calc(100% - 12%);
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 2vw;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2%;
+}
+.searchBarIcon{
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    color: #000;
+    margin-left: 4vw;
+    
+}
+
+/*
+
+        .searchBarIcon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+*/
+
+.searchItems{
+    margin: 0;
+    max-width: 945px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    column-gap: 24px;
+    row-gap: 32px;
+}
+.searchedProductContainer{
+    width: 298px;
+    height: 467px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--textColorWhite);
+    box-sizing: border-box;
+    margin: 0;
+}
+.searchedProductImage{
+    width: 298px;
+    height: 311px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+.searchedProductDetailsContainer{
+    width: 298px;
+    height: 156px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+.productNameAndPriceContainer{
+    width: 298px;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 135px;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 16px;
+}
+.productNameAndPrice{
+    width: 132px;
+    height: 71px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 9px;
+    margin: 0;
+}
+.productName{
+    font-family: "Roboto";
+    font-size: 12px;
+    letter-spacing: 0.46px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.productPrice{
+    font-family: "Roboto";
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: var(--productPriceGrey);
+}
+.productBuyNow{
+    width: 288px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+}
+.buyNowButton{
+    width: 155px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.product-icon{
+    cursor: pointer;
+}
+@media only screen and (min-width: 1074px) and (max-width: 1210px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1074px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .topHeaderSectionText{
+        font-size: 54px;
+    }
+    .topHeaderSectionText:nth-child(2){
+        margin-top: -65px;
+    }
+    .highlightedText{
+        color: var(--buttonBlue);
+        margin-left: 20px;
+    }
+    .searchBar{
+        width: calc(100% - 20%);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sideBar{
+        width: 70px;
+        padding: 10px 0px 4px 0px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 24px;
+        height: 36.5px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .topHeaderSection{
+        margin-top: 40px;
+        row-gap: 0px;
+        height: 100px;
+        box-sizing: border-box;
+    }
+    .topHeaderSectionText{
+        font-size: 28px;
+    }
+    .topHeaderSectionText:nth-child(2){
+        margin-top: -35px;
+    }
+    .highlightedText{
+        color: var(--buttonBlue);
+        margin-left: 8px;
+    }
+    .searchBar{
+        width: calc(100% - 20%);
+    }
+    .searchBarContainer{
+        width: 60vw;
+        height: 40px;
+    }
+
+    .searchBar{
+        width: calc(100%);
+        font-size: 8px;
+    }
+    .searchBarIcon{
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        background-color: transparent ;
+        color: #000;
+        margin-left: 2vw;
+        
+    }
+
+    .searchItems{
+        flex-wrap: wrap;
+        margin-top: 30px;
+        column-gap: 24px;
+        row-gap: 32px;
+    }
+
+
+    .searchedProductContainer{
+        width: 212px;
+        height: 395px;
+    }
+    .searchedProductImage{
+        width: 212px;
+        height: 239px;
+    }
+    .searchedProductDetailsContainer{
+        width: 212px;
+        row-gap: 11px;
+    }
+
+    .productNameAndPriceContainer{
+        width: 212px;
+        column-gap: 60px;
+        padding-top: 8px;
+    }
+    .productBuyNow{
+        width: 212px;
+    }
+    .buyNowButton{
+        width: 135px;
+        height: 37px;
+    }
+    .product-icon{
+        cursor: pointer;
+    }
+
+}
+.searchBarIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

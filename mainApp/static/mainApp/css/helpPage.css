@@ -1,0 +1,490 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --fiftyTextFade: rgba(0, 0, 0, 0.5);
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+    --twentyTextFade: rgba(0,0,0,0.2);
+    --secondaryContainer: #D9E3F9; 
+    --focusedSecondaryContainer: #3F5F90;
+    --usernameTextColor: #353535;
+    --searchBarIconBackground: #6F6F6F;
+    --productPriceGrey: #505050;
+    --borderColor: rgba(176, 176, 176, 0.5);
+    --textSubHeadingColor: #848484; 
+    --boxShadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    --redPercentageBorder: #FFD7D7;
+    --redPercentageText: #EF5350;
+    --viewAllColor: #1976D2;
+    --trendUp: #00C853;
+    --trendDown: #EF5350;
+    --trendMedium: #FFB74D;
+    --statusColorGreen: #81C784;
+    --statusColorYellow: #FFB74D;
+    --statusColorRed: #D81B60; 
+    --secondaryContainer: #D1E5F3;
+    --onSecondaryContainer: #091E28;
+    --notificationsNavBarTextColor: #B0B0B0;
+    --notificationTrendBorderColorGreen: #D7FFDB;
+    --notificationTrendBackGroundColorGreen: #77EC9F;
+    --notificationTrendBorderColorRed: #FFD7D7;
+    --notificationTrendBackGroundColorRed: #EC7777;
+    --removeColor: #BA1A1A;
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.sideBar{
+    width: 200px;
+    max-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    padding: 30px 0px 16px 0px;
+}
+.companyLogoAndNavigationContainer{
+    width: 168px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 39px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.companyLogoImageIpad{
+    display: none;
+}
+.companyLogo{
+    width: 91px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 91px;
+    height: 44px;
+    object-fit: cover;
+}
+.navigationItemsContainer{
+    row-gap: 10px;
+    width: 168px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigationItem{
+    width: 168px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondaryGrey);
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 4%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding-left: 28px;
+}
+.navigationItem:hover{
+    background-color: var(--secondaryContainer);
+}
+.navigationItem:nth-child(7){
+    background-color: var(--focusedSecondaryContainer);
+    color: var(--textColorWhite);
+}
+.navigationItemInsideContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    column-gap: 13px;
+}
+.icon-large{
+    font-size: 32px;
+}
+.icon-larger{
+    font-size: 48px;
+    cursor: pointer;
+}
+.accountProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 61px;
+    border-top: 2px solid var(--twentyTextFade);
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 8px;
+    background-color: var(--backgroundColor);
+    cursor: pointer;
+}
+.accountProfilePictureContainer{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountProfilePicture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.accountUsername{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--usernameTextColor);
+    width: 86px;
+    height: 19px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.mainPageContainer{
+    width: calc(100% - 200px);
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 8vh;
+    row-gap: 42px;
+    padding-bottom: 4vh;
+}
+.helpPageAllItemsContainer{
+    width: 1070px;
+    height: 888px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    row-gap: 30px;
+}
+.helpPageTitleText{
+    width: 1050px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Heebo";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.allFrequentlyAskedQuestionsContainer{
+    width: 750px;
+    height: 660px;
+    
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.frequentlyAskedQuestionContainer{
+    width: 750px;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s height ease-in-out;
+    row-gap: 12px;
+    border-bottom: 1px solid var(--borderColor);
+    cursor: pointer;
+}
+.frequentrlyAskedQuestionHeaderSection{
+    width: 750px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+}
+.frequentlyAskedQuestionHeaderText{
+    width: 713px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    box-sizing: border-box;
+}
+.frequentlyAskedQuestionsIconsContainer{
+    cursor: pointer;
+}
+.frequentlyAskedQuestionAnswerText{
+    width: 713px;
+    height: 58px;
+    font-family: "Heebo";
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    transition: 0.5s opacity ease-in-out;
+}
+@media only screen and (min-width: 1074px) and (max-width: 1210px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1074px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .helpPageAllItemsContainer{
+        width: 512px;
+        height: 1002px;
+        row-gap: 20px;
+    }
+    .helpPageTitleText{
+        width: 512px;
+        height: 42px;
+    }
+    .allFrequentlyAskedQuestionsContainer{
+        width: 451px;
+        height: 930px;
+    }
+    .frequentlyAskedQuestionContainer{
+        width: 461px;
+        height: 200px;
+    }
+    .frequentrlyAskedQuestionHeaderSection{
+        width: 461px;
+        height: 70px;
+    }
+    .frequentlyAskedQuestionHeaderText{
+        width: 424px;
+        height: 70px;
+    }
+    .frequentlyAskedQuestionsIconsContainer{
+        cursor: pointer;
+    }
+    .frequentlyAskedQuestionAnswerText{
+        width: 424px;
+        height: 116px;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .mediumDisplayNone{
+        display: flex;
+    }
+    .sideBar{
+        width: 66px;
+        padding: 10px 0px 4px 0px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 24px;
+        height: 36.5px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .helpPageAllItemsContainer{
+        width: 249px;
+        height: 652px;
+        row-gap: 20px;
+    }
+    .helpPageTitleText{
+        width: 249px;
+        height: 84px;    
+        font-size: 24px;
+        text-align: center;
+    }
+    .allFrequentlyAskedQuestionsContainer{
+        width: 249px;
+        height: 573px;
+    }
+    .frequentlyAskedQuestionContainer{
+        width: 249px;
+        height: 135px;
+    }
+    .frequentrlyAskedQuestionHeaderSection{
+        width: 249px;
+        height: 48px;
+    }
+    .frequentlyAskedQuestionHeaderText{
+        width: 214px;
+        height: 48px;   
+        font-size: 18px;
+    }
+    .frequentlyAskedQuestionAnswerText{
+        width: 214px;
+        height: 90px;
+        font-size: 12px;
+    }
+
+}

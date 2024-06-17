@@ -1,0 +1,1618 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+    --twentyTextFade: rgba(0,0,0,0.2);
+    --secondaryContainer: #D9E3F9; 
+    --focusedSecondaryContainer: #3F5F90;
+    --usernameTextColor: #353535;
+    --searchBarIconBackground: #6F6F6F;
+    --productPriceGrey: #505050;
+    --borderColor: rgba(176, 176, 176, 0.5);
+    --textSubHeadingColor: #848484; 
+    --boxShadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    --redPercentageBorder: #FFD7D7;
+    --redPercentageText: #EF5350;
+    --viewAllColor: #1976D2;
+    --trendUp: #00C853;
+    --trendDown: #EF5350;
+    --trendMedium: #FFB74D;
+    --statusColorGreen: #81C784;
+    --statusColorYellow: #FFB74D;
+    --statusColorRed: #D81B60; 
+
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.sideBar{
+    width: 200px;
+    max-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    padding: 30px 0px 16px 0px;
+}
+.companyLogoAndNavigationContainer{
+    width: 168px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 39px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.companyLogoImageIpad{
+    display: none;
+}
+.companyLogo{
+    width: 91px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 91px;
+    height: 44px;
+    object-fit: cover;
+}
+.navigationItemsContainer{
+    row-gap: 10px;
+    width: 168px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigationItem{
+    width: 168px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondaryGrey);
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 4%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding-left: 28px;
+}
+.navigationItem:hover{
+    background-color: var(--secondaryContainer);
+}
+.navigationItem:nth-child(1){
+    background-color: var(--focusedSecondaryContainer);
+    color: var(--textColorWhite);
+}
+.navigationItemInsideContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    column-gap: 13px;
+}
+
+.accountProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 61px;
+    border-top: 2px solid var(--twentyTextFade);
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 8px;
+    background-color: var(--backgroundColor);
+    cursor: pointer;
+}
+.accountProfilePictureContainer{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountProfilePicture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.accountUsername{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--usernameTextColor);
+    width: 86px;
+    height: 19px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.mainPageContainer{
+    width: calc(100% - 200px);
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 2vh;
+    row-gap: 42px;
+}
+.mainPageTopSectionContainer{
+    max-width: 987px;
+    height: 510px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    column-gap: 20px;
+    box-sizing: border-box;
+}
+.topSectionLeftContainer{
+    width: 668px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 38px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.welcomeBackUserContainer{
+    width: 628px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items:  flex-start;
+    justify-content: center;
+    margin: 0;
+    padding-left: 32px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--textColorWhite);
+    border-radius: 8px;
+    border: 1px solid var(--borderColor);
+    row-gap: 10px;
+
+}
+.welcomeBackUserImage{
+    width: 143px;
+    height: 169px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.welcomeBackUserHeaderText{
+    font-family: "Inter";
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    box-sizing: border-box;
+}
+.welcomeBackUserSubHeaderText{
+    font-family: "Inter";
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--textSubHeadingColor);
+}
+
+.recommendedItemsAndBestDeals{
+    width: 628px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 30px;
+}
+.recommededItemsDetailsContainer{
+    width: 208px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    column-gap: 16px;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.recommendedItemsContainer{
+    width: 299px;
+    height: 128px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--textColorWhite);
+    border-radius: 12px;
+    margin: 0;
+    box-shadow: var(--boxShadow);
+    padding: 12px 18px;
+}
+
+.recomendedItemsIconContainer{
+    background-color: #BDC7DC;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.recommendedItemsTextContainer{
+    height: 64;
+    width: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.recommendedItemsAndBestDealsHeaderText{
+    font-family: "Heebo";
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--sixtyTextFade);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.recommendedItemsCounterText{
+    font-family: "Heebo";
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.recommededItemsViewAll{
+    font-family: "Heebo";
+    width: 263px;
+    height: 18px;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    color: var(--viewAllColor);
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 15px 10px 0px 0px;
+    cursor: pointer;
+}
+
+
+
+.bestDealsContainer{
+    width: 299px;
+    height: 128px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--textColorWhite);
+    border-radius: 12px;
+    margin: 0;  
+    box-shadow: var(--boxShadow);
+    padding: 12px 18px 0px 0px;
+    row-gap: 18px;
+}
+
+.bestDealsDetailsContainer{
+    width: 230px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    column-gap: 20px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    margin-left: 18px;
+}
+
+.bestDealsIconContainer{
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #D1FFD6;
+    color: #00C853;
+    font-weight: 900;
+    border-radius: 18px;
+}
+
+.bestDealsTextContainer{
+    width: 85px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bestDealsCounterText{
+    font-family: "Heebo";
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 1%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bestDealsPercentageContainer{
+    width: 61px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 2px;
+    border-radius: 50px;
+    border: 1px solid var(--redPercentageBorder);
+    color: var(--redPercentageText);
+    font-family: "Heebo";
+    font-family: 500;
+    font-size: 12px;
+}
+.icon-small{
+    font-size: 12px;
+}
+
+.bestDealsViewAll{
+    width: 299px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: end;
+    background-color: #F0F0F0;
+    color: var(--viewAllColor);
+    font-size: 14px;
+    font-family: "Heebo";
+    font-weight: 700;
+    margin: 0;
+    box-sizing: border-box;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.topSectionRightContainer{
+
+    /* 
+    width: 319px;
+    height: 510px;
+    */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*
+    row-gap: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 15px;
+    */
+}
+
+.dashboardUserDetailsAndNotesContainer{
+    width: 319px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.dashboardUserDetails{
+    width: 319px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+}
+
+.dashboardUserProfilePicture{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.dashboardUserDetailsUsername{
+    width: 127px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: start;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Inter";
+    font-size: 16px;
+    letter-spacing: 4%;
+    font-weight: 700;
+}
+
+.dashboardNotesList{
+    width: 319px;
+    height: 362px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--textColorWhite);
+    box-shadow: var(--boxShadow);
+    margin: 0;
+    box-sizing: border-box;
+}
+.dashboardNotesListHeader{
+    width: 285px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+}
+.notesHeaderAndDate{
+   width: 29px;
+   height: 72px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; 
+   justify-content: center;
+   margin: 0;
+   box-sizing: border-box;
+}
+.notesHeader{
+    width: 64px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--eightyTextFade);
+    font-family: "Heebo";
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.notesDate{
+    width: 79px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: "Heebo";
+    line-height: 16px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+.addNoteContainer{
+    width: 124px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttonBlue);
+    border-radius: 8px;
+    border: 1px solid var(--buttonBlue);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 8px;
+    cursor: pointer;
+}
+.dashboardNotesListItems{
+    width: 285px;
+    height: 252px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    margin: 0;
+    box-sizing: border-box;
+}
+.notesItemContainer{
+    width: 285;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 12px;
+    cursor: pointer;
+    margin-left: -32px;
+}
+
+.notesItemIconContainer{
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #D1E4FF;
+    color: var(--viewAllColor);
+    margin: 0;
+    box-sizing: border-box;
+}
+.notesItemDetailsContainer{
+    width: calc(100% - 52px);
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    row-gap: 10px;
+
+}
+.notesItemHeaderText{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+    line-height: 143%;
+    color: var(--eightyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+.notesItemSubHeaderText{
+    width: 100%;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.recommendedItemsAndBestDealsTwo{
+    width: 628px;
+    height: 128px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 30px;
+}
+.mainPageBottomSectionContainer{
+    max-width: 963px;
+    height: 100%;
+    border-radius: 15px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navBar{
+    width: 963px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px 48px 10px 24px;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid var(--sixtyTextFade);
+}
+.navBarTextItemText{
+    width: 340px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-family: "Heebo";
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+.navBarTextItemType{
+    width: 167px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+.navBarTextPriceTrends{
+    width: 167px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navBarTextStatus{
+    width: 167px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+.allDashboardItemsContainter{
+    width: 963px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+    padding-top: 92px;
+}
+
+.dashboardSavedItemsContainer{
+    width: 963px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+.dashboardSavedItemsContainer:nth-child(odd) {
+    background-color: #FFFFFF; 
+}
+
+.dashboardSavedItemsContainer:nth-child(even) {
+    background-color:#F6F8FC; 
+}
+
+.savedItemImageAndNameContainer{
+    width: 341px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 12px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.savedItemImageContainer{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 64px;
+}
+.savedItemImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 64px;
+    object-fit: cover;
+}
+
+.savedItemTextContainer{
+    width: 289px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    row-gap: 2px;
+    margin: 0;
+}
+
+.savedItemHeaderText{
+    width: 289px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+    line-height: 143%;
+    color: var(--eightyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.savedItemSubHeaderText{
+    width: 289px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 12px; 
+    line-height: 16px;   
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.itemType{
+    width: 166px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: start;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.itemPriceTrendsContainer{
+    width: 166px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: start;
+    box-sizing: border-box;
+    margin: 0;
+    column-gap: 4px;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--trendUp);
+}
+
+.itemStatus{
+    width: 87px;
+    height: 24px;
+    border-radius: 50px;
+    background-color: var(--statusColorGreen);
+    padding: 8px 16px;
+    color: white;
+    font-family: "Roboto";
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.itemStatusContainer{
+    width: 166px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.itemEdit{
+    width: 28px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    line-height: 150%;
+    color: var(--viewAllColor);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.itemEdit:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1074px) and (max-width: 1210px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+}
+
+
+
+@media only screen and (min-width: 601px) and (max-width: 1074px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+        height: 100%;
+    }
+
+    .mainPageTopSectionContainer{
+        width: 530px;
+        height: 818px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        row-gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .topSectionLeftContainer{
+        width: 530px;
+        height: 346px;
+        row-gap: 0px;
+        border-radius:0 px;
+        margin: 0;
+    }
+
+    .welcomeBackUserContainer{
+        width: 507px;
+        height: 306px;
+    }
+    
+    .welcomeBackUserImage{
+        width: calc(143px / 1);
+        height: calc(169px / 1);       
+        right: 5px;
+    }
+
+    .recommendedItemsAndBestDeals{
+        display: none;
+    }
+    .recommendedItemsAndBestDealsTwo{
+        width: 246px;
+        height: 258px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        box-sizing: border-box;
+        row-gap: 16px;
+    }
+    .recommendedItemsContainer{
+        width: 246px;
+        height: 114px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        row-gap: 10px;
+    }
+    .recommededItemsDetailsContainer{
+        width: 208px;
+        height: 64px;
+        column-gap: 20px;
+        box-sizing: border-box;
+        padding-top: 12px 18px;
+        row-gap: 10px;
+    }
+
+    .recommendedItemsAndBestDealsHeaderText{
+        width: 133px;
+        height: 21px;
+        text-align: start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .recommendedItemsCounterText{
+        width: 136px;
+        height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .recommededItemsViewAll{
+        width: 210px;
+        height: 210px;
+        margin: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .bestDealsContainer{
+        width: 244px;
+        height: 114px;
+        margin: 0;  
+        display: flex;
+        justify-content: center;
+        box-shadow: var(--boxShadow);
+        padding: 0px 0px 0px 0px;
+        margin: 0;
+        row-gap: 20px;
+        overflow: hidden;
+    }
+
+    .bestDealsDetailsContainer{
+        height: 56px;
+        column-gap: 10px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        margin: auto;
+    }
+
+    .bestDealsViewAll{
+        width: 244px;
+        height: 32px;
+        
+    }
+
+    .topSectionRightContainer{
+        width: 511px;
+        height: 472px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 8px;
+    }
+
+    .dashboardUserDetailsAndNotesContainer{
+        width: 257px;
+        height: 472px;
+        border-radius: 0px;
+        padding-top: 8px;
+    }
+    .dashboardUserDetails{
+        width: 245px;
+        column-gap: 10px;
+    }
+
+    .dashboardUserDetailsUsername{
+        width: 100px;
+        height: 26px;
+    }
+
+    .dashboardNotesList{
+        width: 245px;
+    }
+    .dashboardNotesListHeader{
+        width: 221px;
+    }
+    .notesHeaderAndDate{
+        width: 72px;
+        height: 72px;
+        }
+    .addNoteContainer{
+        width: 112px;
+    }
+    .dashboardNotesListItems{
+        width: 221px;
+    }
+
+    
+    .notesItemContainer{
+        width: 221px;
+        margin-left: 0px;
+    }
+    .notesItemHeaderText{
+        width: 100%;
+        height: 20px;
+    }
+
+
+    .mainPageBottomSectionContainer{
+        max-width: 497px;
+        height: 296px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .navBar{
+        width: 497px;
+        height: 28px;  
+        column-gap: 16px;
+        padding: 10px 24px;
+    }
+    .navBarTextItemText{
+        width: 138px;
+    }
+    .navBarTextItemType{
+        display: none;
+    }
+    .navBarTextPriceTrends{
+        width: 132px;
+    }
+
+    .navBarTextStatus{
+        width: 152px;
+    }
+    .allDashboardItemsContainter{
+        width: 497px;
+        height: 264px;
+    }
+
+    .dashboardSavedItemsContainer{
+        width: 497px;
+        column-gap: 0px;
+    }
+
+    .dashboardSavedItemsContainer:nth-child(odd) {
+        background-color: #FFFFFF; 
+    }
+
+    .dashboardSavedItemsContainer:nth-child(even) {
+        background-color:#F6F8FC; 
+    }
+
+    .savedItemImageAndNameContainer{
+        width: 156px;
+    }
+    .savedItemTextContainer{
+        width: 104px;
+    }
+
+    .savedItemHeaderText{
+        width: 104px;
+    }
+
+    .savedItemSubHeaderText{
+        width: 104px;
+    }
+
+    .itemType{
+        display: none;
+    }
+
+    .itemPriceTrendsContainer{
+        width: 136px;
+    }
+
+    .itemStatusContainer{
+        width: 130px;
+        height: 22px;
+    }
+    .itemStatus{
+        width: 87px;
+        height: 22px;
+        border-radius: 50px;
+        background-color: var(--statusColorGreen);
+        padding: 0px 9px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .sideBar{
+        width: 66px;
+        padding: 10px 0px 4px 0px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 24px;
+        height: 36.5px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+
+    .mainPageTopSectionContainer{
+        width: 246px;
+        height: 907px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        row-gap: 16px;
+        box-sizing: border-box;
+    }
+
+    .topSectionLeftContainer{
+        width: 244px;
+        height: 161px;
+        row-gap: 0px;
+        border-radius:0 px;
+        margin: 0;
+    }
+
+    .welcomeBackUserContainer{
+        width: 244px;
+        height: 161px;
+        padding-top: 24px;
+        justify-content: flex-start;
+    }
+    .welcomeBackUserHeaderText{
+        width: 203px;
+        height: 19px;
+        font-family: "Inter";
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .welcomeBackUserSubHeaderText{
+        width: 176px;
+        height: 28px;
+        font-family: "Inter";
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0;
+        box-sizing: border-box;
+        color: var(--textSubHeadingColor);
+        
+    }
+    
+    .welcomeBackUserImage{
+        width: calc(143px / 2);
+        height: calc(169px / 2);       
+        right: 3px;
+    }
+
+    .recommendedItemsAndBestDeals{
+        display: none;
+    }
+    .recommendedItemsAndBestDealsTwo{
+        width: 244px;
+        height: 255px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        box-sizing: border-box;
+        row-gap: 16px;
+    }
+
+    .recommendedItemsContainer{
+        width: 244px;
+        height: 114px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        row-gap: 10px;
+    }
+    .recommededItemsDetailsContainer{
+        width: 208px;
+        height: 64px;
+        column-gap: 20px;
+        box-sizing: border-box;
+        padding-top: 12px 18px;
+    }
+
+    .recommendedItemsAndBestDealsHeaderText{
+        width: 133px;
+        height: 21px;
+        text-align: start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .recommendedItemsCounterText{
+        width: 136px;
+        height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .recommededItemsViewAll{
+        width: 210px;
+        height: 18px;
+        margin: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .bestDealsContainer{
+        width: 244px;
+        height: 114px;
+        margin: 0;  
+        display: flex;
+        justify-content: center;
+        box-shadow: var(--boxShadow);
+        padding: 0px 0px 0px 0px;
+        margin: 0;
+        row-gap: 20px;
+        overflow: hidden;
+    }
+
+    .bestDealsDetailsContainer{
+        height: 56px;
+        column-gap: 10px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        margin: auto;
+    }
+
+    .bestDealsViewAll{
+        width: 244px;
+        height: 30px;
+        
+    }
+
+    .topSectionRightContainer{
+        width: 244px;
+        height: 747px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 0px;
+    }
+
+    .dashboardUserDetailsAndNotesContainer{
+        width: 244px;
+        height: 472px;
+        border-radius: 0px;
+        padding-top: 0px;
+    }
+    .dashboardUserDetails{
+        width: 244px;
+        column-gap: 10px;
+    }
+
+    .dashboardUserDetailsUsername{
+        width: 95px;
+        height: 26px;
+    }
+
+    .dashboardNotesList{
+        width: 244px;
+    }
+    .dashboardNotesListHeader{
+        width: 216px;
+    }
+    .notesHeaderAndDate{
+        width: 79px;
+        height: 72px;
+        }
+    .addNoteContainer{
+        width: 112px;
+    }
+    .dashboardNotesListItems{
+        width: 209px;
+    }
+
+    
+    .notesItemContainer{
+        width: 209px;
+        margin-left: 0px;
+    }
+    .notesItemHeaderText{
+        width: 100%;
+        height: 20px;
+    }
+
+
+    .mainPageBottomSectionContainer{
+        width: 244px;
+        height: 295px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .navBar{
+        width: 244px;
+        height: 28px;  
+        column-gap: 16px;
+        padding: 10px 24px;
+    }
+    .navBarTextItemText{
+        width: 138px;
+    }
+    .navBarTextItemType{
+        display: none;
+    }
+    .navBarTextPriceTrends{
+        display: none;
+    }
+
+    .navBarTextStatus{
+        display: none;
+    }
+    .allDashboardItemsContainter{
+        width: 244px;
+        height: 266px;
+    }
+
+    .dashboardSavedItemsContainer{
+        width: 244px;
+        column-gap: 0px;
+    }
+
+    .dashboardSavedItemsContainer:nth-child(odd) {
+        background-color: #FFFFFF; 
+    }
+
+    .dashboardSavedItemsContainer:nth-child(even) {
+        background-color:#F6F8FC; 
+    }
+
+    .savedItemImageAndNameContainer{
+        width: 156px;
+    }
+    .savedItemTextContainer{
+        width: 104px;
+    }
+
+    .savedItemHeaderText{
+        width: 104px;
+    }
+
+    .savedItemSubHeaderText{
+        width: 104px;
+    }
+
+    .itemType{
+        display: none;
+    }
+
+    .itemPriceTrendsContainer{
+        display: none;
+    }
+
+    .itemStatusContainer{
+        display: none;
+    }
+    .itemStatus{
+        display: none;
+    }
+    
+
+
+
+}

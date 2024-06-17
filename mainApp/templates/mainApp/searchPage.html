@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="{% static 'mainApp/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/css/searchPage.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo:wght@100..900&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/74a08d3ece.js" crossorigin="anonymous"></script>
+    <title>PriceProbe</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .companyLogoImage{
+            width: 91px;
+            height: 44px;
+            object-fit: cover;
+        }
+        .searchBarIcon{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+        .navigationItemInsideContainer{
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            column-gap: 13px;
+        }
+        .icon-large{
+            font-size: 32px;
+        }
+        .searchBarForm{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+        .searchBar{
+            width: calc(100%);
+            height: 100%;
+            border: none;
+            outline: none;
+            padding-left: 2vw;
+            background-color: transparent;
+            box-sizing: border-box;
+            font-family: "Roboto";
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 2%;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+        .searchedProductDetailsContainer{
+            width: 298px;
+            height: 156px;
+            box-sizing: border-box;
+            margin: 0;
+            display: flex;
+            row-gap: 20px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .searchedProductImage{
+            width: 298px;
+            height: 311px;
+            object-fit: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .buyNowButton{
+            background-color: transparent;
+        }
+        .icon-cursor{
+            cursor: pointer;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .accountProfilePicture{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sideBar">
+        <div class="companyLogoAndNavigationContainer">
+            <div class="companyLogo">
+                <img class="companyLogoImage" src="{% static 'mainApp/images/sideBarCompanyLogo.png' %}" alt="Company Logo">
+                <img class="companyLogoImageIpad" src="{% static 'mainApp/images/companyLogoSingleLetter.png' %}" alt="Company Logo">
+            </div>
+    
+            <div class="navigationItemsContainer">
+
+                <a class="navigationItem" href="{% url 'dashboardPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            team_dashboard
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Dashboard
+                        </p>
+                        
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'searchPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            search
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Search
+                        </p>
+                    </div>
+                </a>
+
+                <a class="navigationItem" href="{% url 'accountPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            person
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Account
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'savedPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            bookmark
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Saved
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'trendingPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            local_fire_department
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Trending
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'notificationsPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            notifications
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Notifcations
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem"  href="{% url 'helpPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            help
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Help
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="{% url 'accountPage' %}">
+            <div class="accountProfileContainer">
+                <div class="accountProfilePictureContainer">
+                    <img class="accountProfilePicture" src="{{ currentUser.profilePicture.url }}" alt="Profile Picture">
+                </div>
+                <p class="accountUsername">
+                    {{currentUser.username}}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="mainPageContainer">
+
+        <div class="topHeaderSection">
+            <p class="topHeaderSectionText">
+                Find Your Perfect
+            </p>
+            <p class="topHeaderSectionText">
+                Deal 
+                <span class="highlightedText">Today</span>
+            </p>
+
+            <div class="searchBarContainer">
+                <form class="searchBarForm" method="post">
+                    {% csrf_token %}
+                    {{ searchBarForm.searchBar }}
+                </form>
+
+                <div class="searchBarIconContainer">
+                    <span class="material-symbols-outlined icon-large searchBarIcon">
+                        search
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="searchItems">
+            {% for searchedItem in collectedItemsContainer %}
+                <div class="searchedProductContainer">
+                    <img class="searchedProductImage" src="{{ searchedItem.3 }}" alt="Searched Product">
+
+                    <div class="searchedProductDetailsContainer">
+
+                        <div class="productNameAndPriceContainer">
+
+                            <div class="productNameAndPrice">
+                                <p class="productName">
+                                    {{ searchedItem.0 | truncatechars_html:20 }}
+                                </p>
+                                <p class="productPrice">
+                                    {% if searchedItem.1 == "Unavailable" %}
+                                        {{ searchedItem.1 }}
+                                    {% else %}
+                                        ${{ searchedItem.1 }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <div class="productMoreDetails">
+                                <span class="material-symbols-outlined icon-large product-icon">
+                                    more_vert
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="productBuyNow">
+                            <form method="post" target="_blank">
+                                {% csrf_token %}
+                                <button type="submit" class="buyNowButton" value="{{ searchedItem.2 }}" name="buyNowButton">
+                                    BUY NOW
+                                </button>
+                            </form>
+                            
+                            <form method="post">
+                                {% csrf_token %}
+                                <button type="submit" name="saveProduct">
+                                    {% if searchedItem.4 == True %}
+                                        <i class="fa-solid fa-bookmark fa-2x icon-cursor"></i>
+                                    {% else %}
+                                        <i class="fa-regular fa-bookmark fa-2x icon-cursor"></i>
+                                    {% endif %}
+                                </button>
+                                <input type="text" style="display: none;" name="productHeaderText" value="{{ searchedItem.0 }}">
+                                <input type="text" style="display: none;" name="productPrice" value="{{ searchedItem.1 }}">
+                                <input type="text" style="display: none;" name="productLink" value="{{ searchedItem.2 }}">
+                                <input type="text" style="display: none;" name="productImage" value="{{ searchedItem.3 }}">
+                                <input type="text" style="display: none;" name="isProductSaved" value="{{ searchedItem.4 }}">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</body>
+</html>

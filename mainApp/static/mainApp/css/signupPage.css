@@ -1,0 +1,225 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 20px;
+}
+a{
+    text-decoration: none;
+}
+.signupContainer{
+    width: 428px;
+    height: 738px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogo{
+    width: 117px;
+    height: 36px;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 117px;
+    height: 36px;
+    margin: 0;
+    object-fit: cover; 
+    box-sizing: border-box;
+}
+.signupHeader{
+    width: 425px;
+    height: 56px;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 24px 0px 40px 0px;
+    box-sizing: border-box;
+}
+
+
+.signupInformationContainer{
+    width: 428px;
+    height: 362px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.signupButton{
+    width: 428px;
+    height: 42px;
+    background-color: var(--buttonBlue);
+    color: var(--textColorWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    letter-spacing: 0.46px;
+    font-family: "Roboto";
+    line-height: 26px;
+    font-size: 15px;
+    margin: 40px 0px 24px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.forgotPassword{
+    width: 131px;
+    height: 24px;
+
+    color: var(--secondaryGrey);
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.alreadyHaveAnAccountContainer{
+    width: 428px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 10px 0px 0px 0px;  
+    column-gap: 32px;  
+    background-color: white;
+    border: 1px solid black;
+}
+.alreadyHaveAnAccountText{
+    width: 194px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.alreadyHaveAnAccountLogin{
+    color: var(--brighterPrimary);
+    width: 45px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.signupFormTopHelper{
+    width: 84px;
+    height: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.15px;
+    line-height: 12px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.signupFormBottomHelper{
+    width: 428px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    line-height: 12px;
+    color: var(--sixtyTextFade);
+    margin: 0;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+.userSignupFormInformation{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--sixtyTextFade);
+    padding-left: 0px;
+    padding-bottom: 4px;
+    color: black;
+    font-family: "Roboto";
+    letter-spacing: 0.15px;
+    line-height: 24px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--backgroundColor);
+}
+.userSignupFormInformation::placeholder{
+    color: var(--eightyTextFade);
+}
+@media only screen and (max-width: 600px) {
+    .signupContainer{
+        width: 288px;
+    }
+    .signupHeader{
+        width: 288px;
+        font-size: 15px;
+    }
+    .signupInformationContainer{
+        width: 288px;
+    }
+
+    .signupButton{
+        width: 288px;
+    }
+    .alreadyHaveAnAccountContainer{
+        width: 288px;
+        column-gap: 16px;  
+    }
+    .alreadyHaveAnAccountText{
+        width: 148px;
+        font-size: 12px;
+    }
+    .alreadyHaveAnAccountLogin{
+        width: 34px;
+        font-size: 12px;
+    }
+
+}
