@@ -17,13 +17,6 @@ from datetime import timedelta
 lastSearch = ""
 
 def landingPage(request):
-    send_mail(
-        "Make appointment",
-        "Here is the message.",
-        "4watching1209@gmail.com",
-        ["chessfor51@gmail.com"],
-        fail_silently=False,
-    )
     if request.user.is_authenticated:
         return redirect("dashboardPage")
     context={}
