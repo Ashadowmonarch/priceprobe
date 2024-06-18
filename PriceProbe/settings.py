@@ -92,6 +92,10 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -155,6 +159,11 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_SES_REGION_NAME = 'ca-central-1'
+AWS_SES_REGION_ENDPOINT = "email.ca-central-1.amazonaws.com"
+
 '''
 
     send_mail(
@@ -170,7 +179,6 @@ EMAIL_HOST_USER = 'your-email@example.com'
 EMAIL_HOST_PASSWORD = ""
 EMAIL_PORT = 587  # or 465 for SSL
 EMAIL_USE_TLS = True  # or False if using SSLEMAIL_HOST_PASSWORD = 'your-email-password'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 DEFAULT_FROM_EMAIL = 'your-email@example.com'
