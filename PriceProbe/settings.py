@@ -184,5 +184,7 @@ EMAIL_USE_TLS = True  # or False if using SSLEMAIL_HOST_PASSWORD = 'your-email-p
 DEFAULT_FROM_EMAIL = 'your-email@example.com'
 
 
+production access for emails: https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html
+
 '''
 
