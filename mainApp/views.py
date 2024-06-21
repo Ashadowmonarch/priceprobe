@@ -64,13 +64,6 @@ def signupPage(request):
 
 @login_required(login_url='/login')
 def dashboardPage(request):
-    send_mail(
-        "Subject here",
-        "Here is the message.",
-        "randomtry4@gmail.com",
-        ["4watching1209@gmail.com"],
-        fail_silently=False,
-    )
     currentUser = request.user
 
     dashboardProducts = Product.objects.filter(users=currentUser,isProductSaved=True)
