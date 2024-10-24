@@ -1,0 +1,723 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --fiftyTextFade: rgba(0, 0, 0, 0.5);
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+    --twentyTextFade: rgba(0,0,0,0.2);
+    --secondaryContainer: #D9E3F9; 
+    --focusedSecondaryContainer: #3F5F90;
+    --usernameTextColor: #353535;
+    --searchBarIconBackground: #6F6F6F;
+    --productPriceGrey: #505050;
+    --borderColor: rgba(176, 176, 176, 0.5);
+    --textSubHeadingColor: #848484; 
+    --boxShadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    --redPercentageBorder: #FFD7D7;
+    --redPercentageText: #EF5350;
+    --viewAllColor: #1976D2;
+    --trendUp: #00C853;
+    --trendDown: #EF5350;
+    --trendMedium: #FFB74D;
+    --statusColorGreen: #81C784;
+    --statusColorYellow: #FFB74D;
+    --statusColorRed: #D81B60; 
+    --secondaryContainer: #D1E5F3;
+    --onSecondaryContainer: #091E28;
+    --notificationsNavBarTextColor: #B0B0B0;
+    --notificationTrendBorderColorGreen: #D7FFDB;
+    --notificationTrendBackGroundColorGreen: #77EC9F;
+    --notificationTrendBorderColorRed: #FFD7D7;
+    --notificationTrendBackGroundColorRed: #EC7777;
+    --removeColor: #BA1A1A;
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.sideBar{
+    width: 200px;
+    max-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    padding: 30px 0px 16px 0px;
+}
+.companyLogoAndNavigationContainer{
+    width: 168px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 39px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.companyLogoImageIpad{
+    display: none;
+}
+.companyLogo{
+    width: 91px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 91px;
+    height: 44px;
+    object-fit: cover;
+}
+.navigationItemsContainer{
+    row-gap: 10px;
+    width: 168px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigationItem{
+    width: 168px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondaryGrey);
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 4%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding-left: 28px;
+}
+.navigationItem:hover{
+    background-color: var(--secondaryContainer);
+}
+.navigationItem:nth-child(6){
+    background-color: var(--focusedSecondaryContainer);
+    color: var(--textColorWhite);
+}
+.navigationItemInsideContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    column-gap: 13px;
+}
+.icon-large{
+    font-size: 32px;
+}
+.icon-larger{
+    font-size: 48px;
+    cursor: pointer;
+}
+.accountProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 61px;
+    border-top: 2px solid var(--twentyTextFade);
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 8px;
+    background-color: var(--backgroundColor);
+    cursor: pointer;
+}
+.accountProfilePictureContainer{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountProfilePicture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.accountUsername{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--usernameTextColor);
+    width: 86px;
+    height: 19px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.mainPageContainer{
+    width: calc(100% - 200px);
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 4vh;
+    row-gap: 42px;
+    padding-bottom: 4vh;
+}
+.notificationsPageAllItemsContainer{
+    width: 1080px;
+    height: 808px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    row-gap: 20px;
+}
+.notificationsPageHeaderAndSubHeaderTextContainer{
+    width: 632px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    row-gap: 32px;
+}
+.notificationsPageHeaderText{
+    width: 405px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttonBlue);
+    font-size: 67px;
+    font-family: "Inter";
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: -0.25px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.notificationsPageSubHeaderText{
+    width: 632px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fiftyTextFade);
+    font-family: "Inter";
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.allNotificationsContainer{
+    width: 1040px;
+    height: 588px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;           
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--textColorWhite);
+    box-shadow: var(--boxShadow);
+}
+.notificationsContainerNavBar{
+    width: 1040px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 24px;
+    margin: 0;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--borderColor);
+    column-gap: 12px;
+}
+.navBarItemName{
+    width: 309px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 143%;
+    color: var(--notificationsNavBarTextColor);
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.navBarItemType{
+    width: 193px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--notificationsNavBarTextColor);
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.navBarNotification{
+    width: 193px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--notificationsNavBarTextColor);
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.navBarPercentage{
+    width: 193px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--notificationsNavBarTextColor);
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+.allNotificationItemsContainer{
+    width: 1040px;
+    height: 552px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.notificationItem{
+    width: 1040px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--borderColor);
+    padding: 0px 24px;
+    column-gap: 9px;
+    cursor: pointer;
+}
+.productNotificationName{
+    width: 313px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Heebo";
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productNotificationType{
+    width: 196px;
+    height: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--sixtyTextFade);
+}
+.productNotificationPriceTrend{
+    width: 199px;
+    height: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--sixtyTextFade);
+}
+.productNotificationPercentageContainer{
+    width: 50px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 2px solid var(--notificationTrendBorderColorGreen);
+    background-color: var(--notificationTrendBackGroundColorGreen);
+    color: var(--textColorWhite);
+}
+.half-size-icon {
+    font-size: 0.65em;
+}
+.productNotificationPercentageText{
+    width: 23px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Heebo";
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productNotificationRemoveText{
+    width: 204px;
+    height: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: end;
+    font-family: "Heebo";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: var(--removeColor);
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.productNotificationRemoveText:hover{
+    text-decoration: underline;
+}
+@media only screen and (min-width: 1074px) and (max-width: 1210px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1074px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .notificationsPageAllItemsContainer{
+        width: 530px;
+        height: 800px;
+        row-gap: 48px;
+    }
+    .notificationsPageHeaderAndSubHeaderTextContainer{
+        width: 520px;
+        height: 124px;
+        row-gap: 12px;
+    }
+    .notificationsPageHeaderText{
+        width: 289px;
+        font-size: 48px;
+    }
+    .notificationsPageSubHeaderText{
+        width: 482px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .allNotificationsContainer{
+        width: 512px;
+        height: 588px;
+    }
+    .notificationsContainerNavBar{
+        width: 512px;
+        padding: 0px 12px;
+    }
+    .navBarItemName{
+        width: 246px;
+    }
+    .navBarItemType{
+        display: none;
+    }
+    .navBarNotification{
+        display: none;
+    }
+    .allNotificationItemsContainer{
+        width: 512px;
+    }
+    .notificationItem{
+        width: 512px;
+        padding: 0px 12px;
+    }
+    .productNotificationName{
+        width: 250px;
+    }
+    .productNotificationType{
+        display: none;
+    }
+    .productNotificationPriceTrend{
+        display: none;
+    }
+    .productNotificationRemoveText{
+        width: 149px;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .mediumDisplayNone{
+        display: flex;
+    }
+    .sideBar{
+        width: 66px;
+        padding: 10px 0px 4px 0px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 24px;
+        height: 36.5px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .notificationsPageAllItemsContainer{
+        width: 254px;
+        height: 608px;
+        row-gap: 16px;
+    }
+    .notificationsPageHeaderAndSubHeaderTextContainer{
+        width: 244px;
+        height: 87px;
+        row-gap: 16px;
+    }
+    .notificationsPageHeaderText{
+        width: 192px;
+        height: 39px;
+        font-size: 32px;
+    }
+    .notificationsPageSubHeaderText{
+        width: 245px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 16px;
+
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .allNotificationsContainer{
+        width: 245px;
+        height: 505px;
+    }
+    .notificationsContainerNavBar{
+        width: 245px;
+        column-gap: 12px;
+    }
+    .navBarItemName{
+        width: 200px;
+    }
+    .navBarItemType{
+        display: none;
+    }
+    .navBarNotification{
+        display: none;
+    }
+    .navBarPercentage{
+        display: none;
+    }
+    .allNotificationItemsContainer{
+        width: 245px;
+        height: 469px;
+
+    }
+    .notificationItem{
+        width: 245px;
+    }
+    .productNotificationName{
+        width: 150px;
+        height: 21px;
+    }
+    .productNotificationType{
+        display: none;
+    }
+    .productNotificationPriceTrend{
+        display: none;
+    }
+    .productNotificationPercentageContainer{
+        display: none;
+    }
+    .half-size-icon {
+        font-size: 0.65em;
+    }
+    .productNotificationPercentageText{
+        display: none;
+    }
+    .productNotificationRemoveText{
+        width: 44px;
+        height: 18px;
+        font-size: 12px;
+    }
+
+}

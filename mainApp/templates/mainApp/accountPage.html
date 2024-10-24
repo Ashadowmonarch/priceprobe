@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="{% static 'mainApp/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/css/accountPage.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo:wght@100..900&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/74a08d3ece.js" crossorigin="anonymous"></script>
+    <title>PriceProbe</title>
+    <style>
+        .deactivateAccountContainer{
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 40px;
+            column-gap: 25px;
+            background-color: transparent;
+        }
+        .changeBillingInformationContainer{
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 28px;
+            column-gap: 25px;
+        }
+        .icon-small{
+            font-size: 12px;
+        }
+        .icon-medium{
+            font-size: 20px;
+        }
+
+        .icon-large{
+            font-size: 32px;
+        }
+        .icon-larger{
+            font-size: 48px;
+            cursor: pointer;
+        }
+        .changeProfilePicture{
+            display: none;
+        }
+        .accountProfilePicture{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sideBar">
+        <div class="companyLogoAndNavigationContainer">
+            <div class="companyLogo">
+                <img class="companyLogoImage" src="{% static 'mainApp/images/sideBarCompanyLogo.png' %}" alt="Company Logo">
+                <img class="companyLogoImageIpad" src="{% static 'mainApp/images/companyLogoSingleLetter.png' %}" alt="Company Logo">
+            </div>
+    
+            <div class="navigationItemsContainer">
+                <a class="navigationItem" href="{% url 'dashboardPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            team_dashboard
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Dashboard
+                        </p>
+                        
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'searchPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            search
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Search
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'accountPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            person
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Account
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'savedPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            bookmark
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Saved
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'trendingPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            local_fire_department
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Trending
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'notificationsPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            notifications
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Notifcations
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem"  href="{% url 'helpPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            help
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Help
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a href="{% url 'accountPage' %}">
+            <div class="accountProfileContainer">
+                <div class="accountProfilePictureContainer">
+                    <img class="accountProfilePicture" src="{{ currentUser.profilePicture.url }}" alt="Profile Picture">
+                </div>
+                <p class="accountUsername">
+                    {{currentUser.username}}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="mainPageContainer">
+        <div class="accountPageAllItemsContainer">
+
+            <div class="accountProfilePictureAndFavouriteItemsContainer">
+                <div class="accountPageProfilePictureContainer">
+                    <img class="accountPageProfilePicture" src="{{ currentUser.profilePicture.url }}" alt="Profile Picture">
+                    <form method="post" enctype="multipart/form-data" id="changeProflePictureForm">
+                        {% csrf_token %}
+                        {{ changeUserInformationForm.changeProfilePicture }}
+                        <label for="changeProfilePicture" class="accountChangeProfilePicture" name="accountChangeProfilePicture" onchange="updateProfilePicture">
+                            Change profile picture
+                        </label>
+                    </form>
+                </div>
+                <div class="favouriteItemsAndDeleteAccountContainer">
+                    <div class="accountFavouriteItemsContainer">
+                        <p class="favouriteItemsText">
+                            Favourite items 
+                        </p>
+                        <div class="favouriteItemsCounterIconAndTrendContainer">
+                            <div class="iconContainer">
+                                <span class="material-symbols-outlined icon-larger">
+                                    grade
+                                </span>
+                            </div>
+                            <p class="favouriteItemsCounter">
+                                34,143
+                            </p>
+                            <div class="favouriteItemsPriceTrendsContainer">
+                                <span class="material-symbols-outlined icon-medium">
+                                    north
+                                </span>
+                                <p class="priceTrendsText">
+                                    23.1%
+                                </p>
+                            </div>
+    
+                        </div>
+                        <p class="viewAllText">
+                            View all >
+                        </p>
+                    </div>
+                    <div class="deleteAccountContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            delete
+                        </span>
+                        <p class="deleteAccountText">
+                            Delete account
+                        </p>
+                    </div> 
+                    <div class="premiumAndChangePasswordContainer mediumDisplayNone">
+                        <div class="upgradeToPremiumContainer">
+                            <span class="material-symbols-outlined icon-large">
+                                local_activity
+                            </span>
+                            <p class="editAccountInformationButtonText">
+                                Upgrade to Premium 
+                            </p>
+                        </div>
+
+                        <div class="changePasswordContainer">
+                            <span class="material-symbols-outlined icon-large">
+                                lock
+                            </span>
+                            <p class="editAccountInformationButtonText">
+                                Change password
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="accountEditAccountDetailsContainer">
+                <p class="editAccountDetailsText">
+                    Edit Account Details  
+                </p>
+
+                <div class="changeUserAccountInformation">
+                    <div class="changingContainer">
+                        <p class="changingTextHelper">
+                            Username:
+                        </p>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ changeUserInformationForm.changeUsername }}
+                        </form>
+                    </div>
+                    <div class="changingContainer">
+                        <p class="changingTextHelper">
+                            Full Name:
+                        </p>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ changeUserInformationForm.changeFullName }}
+                        </form>
+                    </div>
+                    <div class="changingContainer">
+                        <p class="changingTextHelper">
+                            Phone number:
+                        </p>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ changeUserInformationForm.changePhoneNumber }}
+                        </form>
+                    </div>
+                    <div class="changingContainer">
+                        <p class="changingTextHelper">
+                            Email:
+                        </p>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ changeUserInformationForm.changeEmail }}
+                        </form>
+                    </div>
+                </div>
+
+                <div class="accountAllButtonsContainer">
+                    <div class="premiumAndChangePasswordContainer">
+                        <div class="upgradeToPremiumContainer">
+                            <span class="material-symbols-outlined icon-large">
+                                local_activity
+                            </span>
+                            <p class="editAccountInformationButtonText">
+                                Upgrade to Premium 
+                            </p>
+                        </div>
+
+                        <div class="changePasswordContainer">
+                            <span class="material-symbols-outlined icon-large">
+                                lock
+                            </span>
+                            <p class="editAccountInformationButtonText">
+                                Change password
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="billingInformationAndDeactivateAccountContainer">
+                        <div class="changeBillingInformationContainer">
+                            <span class="material-symbols-outlined icon-large customSmallScreenIconSize">
+                                published_with_changes
+                            </span>
+                            <p class="editAccountInformationButtonText" id="changeBillingInformationId">
+                                Billing information
+                            </p>
+                        </div>
+
+                        <form method="post">
+                            {% csrf_token %}
+                            <button class="deactivateAccountContainer" name="logoutButton">
+                                <span class="material-symbols-outlined icon-large customSmallScreenIconSize">
+                                    toggle_off
+                                </span>
+                                <p class="editAccountInformationButtonText" id="deactivateAccountId">
+                                    Logout
+                                </p>
+                            </butt>
+                        </form>
+                    </div>
+                    <div class="deleteAccountContainer mediumDisplayNone">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                        <p class="deleteAccountText">
+                            Delete account
+                        </p>
+                    </div> 
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        let imageInput = document.getElementById("changeProfilePicture");
+        let form = document.getElementById("changeProflePictureForm");
+        imageInput.addEventListener('change', () => {
+                form.submit();
+            });
+    </script>
+</body>
+</html>

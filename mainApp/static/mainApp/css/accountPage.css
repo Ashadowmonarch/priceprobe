@@ -1,0 +1,1114 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --fiftyTextFade: rgba(0, 0, 0, 0.5);
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+    --twentyTextFade: rgba(0,0,0,0.2);
+    --secondaryContainer: #D9E3F9; 
+    --focusedSecondaryContainer: #3F5F90;
+    --usernameTextColor: #353535;
+    --searchBarIconBackground: #6F6F6F;
+    --productPriceGrey: #505050;
+    --borderColor: rgba(176, 176, 176, 0.5);
+    --textSubHeadingColor: #848484; 
+    --boxShadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    --redPercentageBorder: #FFD7D7;
+    --redPercentageText: #EF5350;
+    --viewAllColor: #1976D2;
+    --trendUp: #00C853;
+    --trendDown: #EF5350;
+    --trendMedium: #FFB74D;
+    --statusColorGreen: #81C784;
+    --statusColorYellow: #FFB74D;
+    --statusColorRed: #D81B60; 
+    --secondaryContainer: #D1E5F3;
+    --onSecondaryContainer: #091E28;
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+input[disabled]{
+    background-color: rgba(214, 218, 223, 0.5);
+}
+.icon-small{
+    font-size: 12px;
+}
+.icon-medium{
+    font-size: 20px;
+}
+
+.sideBar{
+    width: 200px;
+    max-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    padding: 30px 0px 16px 0px;
+}
+.companyLogoAndNavigationContainer{
+    width: 168px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 39px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.companyLogoImageIpad{
+    display: none;
+}
+.companyLogo{
+    width: 91px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 91px;
+    height: 44px;
+    object-fit: cover;
+}
+.navigationItemsContainer{
+    row-gap: 10px;
+    width: 168px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigationItem{
+    width: 168px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondaryGrey);
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 4%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding-left: 28px;
+}
+.navigationItem:hover{
+    background-color: var(--secondaryContainer);
+}
+.navigationItem:nth-child(3){
+    background-color: var(--focusedSecondaryContainer);
+    color: var(--textColorWhite);
+}
+.navigationItemInsideContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    column-gap: 13px;
+}
+.icon-large{
+    font-size: 32px;
+}
+.icon-larger{
+    font-size: 48px;
+    cursor: pointer;
+}
+.accountProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 61px;
+    border-top: 2px solid var(--twentyTextFade);
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 8px;
+    background-color: var(--backgroundColor);
+    cursor: pointer;
+}
+.accountProfilePictureContainer{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountProfilePicture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.accountUsername{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--usernameTextColor);
+    width: 86px;
+    height: 19px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.mainPageContainer{
+    width: calc(100% - 200px);
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 4vh;
+    row-gap: 42px;
+}
+.accountPageAllItemsContainer{
+    width: 1014px;
+    height: 722px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 19px;
+}
+.accountProfilePictureAndFavouriteItemsContainer{
+    width: 351px;
+    height: 722px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 19px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountPageProfilePictureContainer{
+    width: 351px;
+    height: 444px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin: 0;
+    box-sizing: border-box;
+    border-top-left-radius: 16px;
+    row-gap: 32px;
+    box-shadow: var(--boxShadow);
+}
+.accountPageProfilePicture{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0;  
+    box-sizing: border-box;
+}
+.accountChangeProfilePicture{
+    width: 289px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryContainer);
+    color: var(--onSecondaryContainer);
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.favouriteItemsAndDeleteAccountContainer{
+    width: 351px;
+    height: 259px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 19px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountFavouriteItemsContainer{
+    width: 351px;
+    height: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    box-shadow: var(--boxShadow);
+    padding-left: 16px;
+    padding-top: 8px;
+}
+.favouriteItemsText{
+    width: 111px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Heebo";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--sixtyTextFade);
+}
+.favouriteItemsCounterIconAndTrendContainer{
+    width: 331px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.iconContainer{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6DEFF;
+    border-radius: 18px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.favouriteItemsCounter{
+    width: 150px;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Heebo";
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.favouriteItemsPriceTrendsContainer{
+    width: 59px;
+    height: 24px;
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    justify-content: center;
+    color: var(--trendUp);
+    margin: 0;
+    box-sizing: border-box;
+}
+.priceTrendsText{
+    width: 50px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Heebo";
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+}
+.viewAllText{
+    width: 351px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: -16px;
+    padding-right: 12px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+    color: var(--viewAllColor);
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+}
+.deleteAccountContainer{
+    width: 351px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #FFDAD6;
+    color: #410002;
+    border-bottom-left-radius: 16px;
+    border: 1px solid #410002;
+    column-gap: 24px;
+}
+.deleteAccountText{
+    width: 163px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+
+.accountEditAccountDetailsContainer{
+    width: 642px;
+    height: 722px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--textColorWhite);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: var(--boxShadow);
+    padding-left: 32px;
+}
+.editAccountDetailsText{
+    width: 282px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 32px;
+    font-family: "Heebo";
+    font-weight: 200;
+    line-height: 40px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--eightyTextFade);
+}
+.changeUserAccountInformation{
+    width: 580px;
+    height: 328px;
+    row-gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    box-sizing: border-box;
+    margin: 42px 0px 112px 0px;
+}
+.changingContainer{
+    width: 580px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 23px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.changingTextHelper{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Inter";
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    font-weight: 300;
+    margin: 0;
+    box-sizing: border-box;
+}
+.userChangeAccountInformation{
+    border: none;
+    outline: none;
+    text-decoration: none;
+    width: 355px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(85, 95, 113, 0.5);
+    border-radius: 8px;
+    font-size: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+}
+.accountAllButtonsContainer{
+    width: 580px;
+    height: 123px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.premiumAndChangePasswordContainer{
+    width: 580px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mediumDisplayNone{
+    display: none;
+}
+.upgradeToPremiumContainer{
+    width: 281px;
+    height: 54px;
+    column-gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--fiftyTextFade);
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+.upgradeToPremiumContainer:hover{
+    background-color: #FAE287;
+}
+.editAccountInformationButtonText{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Heebo";
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0;
+    box-sizing: border-box;
+}
+.changePasswordContainer{
+    width: 281px;
+    height: 54px;
+    column-gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--fiftyTextFade);
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+.changePasswordContainer:hover{
+    background-color: #8ECFF3;
+}
+.billingInformationAndDeactivateAccountContainer{
+    width: 580px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.changeBillingInformationContainer{
+    width: 281px;
+    height: 54px;
+    column-gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--fiftyTextFade);
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+.changeBillingInformationContainer:hover{
+    background-color: #8EF3C3;
+}
+.deactivateAccountContainer{
+    width: 281px;
+    height: 54px;
+    column-gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--fiftyTextFade);
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+.deactivateAccountContainer:hover{
+    background-color: #F38E8E;
+}
+@media only screen and (min-width: 1074px) and (max-width: 1210px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1074px) {
+    .mediumDisplayNone{
+        display: flex;
+    }
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+
+    .accountPageAllItemsContainer{
+        width: 518px;
+        height: 897px;
+        flex-direction: column;
+        row-gap: 19px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureAndFavouriteItemsContainer{
+        width: 518px;
+        height: 278px;
+        flex-direction: row;
+        row-gap: 0px;
+        column-gap: 16px;
+        margin-top: 32px;
+    }
+    .accountPageProfilePictureContainer{
+        width: 257px;
+        height: 278px;
+        box-sizing: border-box;
+        row-gap: 16px;
+    }
+    .accountPageProfilePicture{
+        width: 175px;
+        height: 175px;
+    }
+    .accountChangeProfilePicture{
+        width: 200px;
+        height: 40px;
+        font-family: "Inter";
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .favouriteItemsAndDeleteAccountContainer{
+        width: 245px;
+        height: 278px;
+        row-gap: 32px;
+    }
+    .accountFavouriteItemsContainer{
+        width: 245px;
+        height: 131px;
+        padding-left: 8px;
+        border-top-right-radius: 16px;
+    }
+    .favouriteItemsCounterIconAndTrendContainer{
+        width: 168px;
+        height: 52px;
+    }
+    .iconContainer{
+        width: 52px;
+        height: 52px;
+    }
+    .favouriteItemsCounter{
+        width: 100px;
+        height: 47px;
+        font-size: 32px;
+    }
+    .favouriteItemsPriceTrendsContainer{
+        display: none;
+    }
+    .priceTrendsText{
+        display: none;
+    }
+    .viewAllText{
+        width: 245px;
+        height: 30px;
+        margin-left: -8px;
+    }
+    .deleteAccountContainer{
+        width: 214px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 0px;
+        column-gap: 16px;
+        margin-bottom: 56px;
+    }
+    .deleteAccountContainer:nth-child(2){
+        /* first delete account has to be invisible */
+        display: none;
+    }
+    .deleteAccountText{
+        width: 122px;
+        height: 20px;
+        font-size: 18px;
+    }
+
+    .accountEditAccountDetailsContainer{
+        padding-top: 16px;
+        width: 518px;
+        height: 603px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        padding-bottom: 32px;
+        margin-bottom: 64px;
+    }
+    .changeUserAccountInformation{
+        width: 357px;
+        height: 338px;
+        margin: 24px 0px 32px 0px;
+    }
+    .changingContainer{
+        width: 355px;
+        column-gap: 0px;
+    }
+    .changingTextHelper{
+        display: none;
+    }
+
+    .accountAllButtonsContainer{
+        width: 474px;
+        height: 96px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        row-gap: 0;
+    }
+    .premiumAndChangePasswordContainer{
+        width: 245px;
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0px;
+        row-gap: 19px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .premiumAndChangePasswordContainer:nth-child(1){
+        display: none;
+    }
+    .upgradeToPremiumContainer{
+        width: 245px;
+        height: 48px;
+    }
+    .upgradeToPremiumContainer:hover{
+        background-color: #FAE287;
+    }
+    .editAccountInformationButtonText{
+        height: 17px;
+        font-size: 16px;
+    }
+    .changePasswordContainer{
+        width: 245px;
+        height: 48px;
+    }
+    .billingInformationAndDeactivateAccountContainer{
+        width: 249px;
+        height: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 0px;
+    }
+    .changeBillingInformationContainer{
+        width: 249px;
+        height: 42px;
+    }
+    .deactivateAccountContainer{
+        width: 249px;
+        height: 42px;
+        column-gap: 24px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mediumDisplayNone{
+        display: flex;
+    }
+    .sideBar{
+        width: 66px;
+        padding: 10px 0px 4px 0px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 24px;
+        height: 36.5px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .accountPageAllItemsContainer{
+        width: 244px;
+        height: 1106px;
+        flex-direction: column;
+        row-gap: 16px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureAndFavouriteItemsContainer{
+        width: 244px;
+        height: 575px;
+        flex-direction: column;
+        row-gap: 16px;
+        column-gap: 0px;
+        margin-top: 0px;
+    }
+    .accountPageProfilePictureContainer{
+        width: 244px;
+        height: 289px;
+        box-sizing: border-box;
+        row-gap: 24px;
+        border-top-right-radius: 16px;
+    }
+    .accountPageProfilePicture{
+        width: 175px;
+        height: 175px;
+    }
+    .accountChangeProfilePicture{
+        width: 200px;
+        height: 40px;
+        font-family: "Inter";
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .favouriteItemsAndDeleteAccountContainer{
+        width: 244px;
+        height: 270px;
+        row-gap: 16px;
+    }
+    .accountFavouriteItemsContainer{
+        width: 244px;
+        height: 131px;
+        padding-left: 8px;
+        border-top-right-radius: 0px;
+    }
+    .favouriteItemsCounterIconAndTrendContainer{
+        width: 168px;
+        height: 52px;
+    }
+    .iconContainer{
+        width: 52px;
+        height: 52px;
+    }
+    .favouriteItemsCounter{
+        width: 100px;
+        height: 47px;
+        font-size: 32px;
+    }
+    .favouriteItemsPriceTrendsContainer{
+        display: none;
+    }
+    .priceTrendsText{
+        display: none;
+    }
+    .viewAllText{
+        width: 244px;
+        height: 30px;
+        font-size: 12px;
+        margin-left: -8px;
+    }
+    .deleteAccountContainer{
+        width: 214px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 0px;
+        column-gap: 16px;
+        margin-bottom: 0px;
+        padding-right: 20px;
+    }
+    .deleteAccountContainer:nth-child(2){
+        /* first delete account has to be invisible */
+        display: none;
+    }
+    .deleteAccountText{
+        width: 122px;
+        height: 20px;
+        font-size: 12px;
+        justify-content: flex-start;
+    }
+
+    .accountEditAccountDetailsContainer{
+        padding-top: 16px;
+        width: 244px;
+        height: 515px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        padding-bottom: 32px;
+        margin-bottom: 64px;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .editAccountDetailsText{
+        width: 214px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .changeUserAccountInformation{
+        width: 214px;
+        height: 208px;
+        row-gap: 16px;
+        margin: 16px 0px 24px 0px;
+    }
+    .userChangeAccountInformation{
+        width: 214px;
+        height: 40px;
+        font-size: 12px;
+
+    }
+    .changingContainer{
+        width: 214px;
+        column-gap: 0px;
+    }
+    .changingTextHelper{
+        display: none;
+    }
+
+    .accountAllButtonsContainer{
+        width: 214px;
+        height: 152px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 16px;
+    }
+    .premiumAndChangePasswordContainer{
+        width: 244px;
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0px;
+        row-gap: 19px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .premiumAndChangePasswordContainer:nth-child(1){
+        display: none;
+    }
+    .upgradeToPremiumContainer{
+        width: 244px;
+        height: 48px;
+    }
+    .upgradeToPremiumContainer:hover{
+        background-color: #FAE287;
+    }
+    .editAccountInformationButtonText{
+        height: 17px;
+        font-size: 16px;
+    }
+    .changePasswordContainer{
+        width: 244px;
+        height: 48px;
+    }
+    .billingInformationAndDeactivateAccountContainer{
+        width: 214px;
+        height: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 0px;
+        row-gap: 16px;
+    }
+    .changeBillingInformationContainer{
+        width: 214px;
+        height: 40px;
+    }
+    .deactivateAccountContainer{
+        width: 214px;
+        height: 40px;
+        column-gap: 16px;
+        padding-right: 40px;
+    }
+    #changeBillingInformationId{
+        font-size: 12px;
+    }
+    .customSmallScreenIconSize{
+        font-size: 24px;
+    }
+    #deactivateAccountId{
+        font-size: 12px; 
+    }
+
+}

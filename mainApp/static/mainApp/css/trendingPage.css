@@ -1,0 +1,1125 @@
+:root{
+    --backgroundColor: #F9F9FF; 
+    --buttonBlue: #3F5F90;
+    --textColorWhite: #FFFFFF;
+    --subheadingPurple: #1D192B;
+    --footerBlack: #171717;
+    --footerGrey: #979797;
+    --secondaryGrey: #555F71;
+    --brighterPrimary: #07305F;
+    --fiftyTextFade: rgba(0, 0, 0, 0.5);
+    --sixtyTextFade: rgba(0, 0, 0, 0.6);
+    --eightyTextFade: rgba(0, 0, 0, 0.87);
+    --twentyTextFade: rgba(0,0,0,0.2);
+    --secondaryContainer: #D9E3F9; 
+    --focusedSecondaryContainer: #3F5F90;
+    --usernameTextColor: #353535;
+    --searchBarIconBackground: #6F6F6F;
+    --productPriceGrey: #505050;
+    --borderColor: rgba(176, 176, 176, 0.5);
+    --textSubHeadingColor: #848484; 
+    --boxShadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    --redPercentageBorder: #FFD7D7;
+    --redPercentageText: #EF5350;
+    --viewAllColor: #1976D2;
+    --trendUp: #00C853;
+    --trendDown: #EF5350;
+    --trendMedium: #FFB74D;
+    --statusColorGreen: #81C784;
+    --statusColorYellow: #FFB74D;
+    --statusColorRed: #D81B60; 
+    --secondaryContainer: #D1E5F3;
+    --onSecondaryContainer: #091E28;
+}
+body{
+    background-color: var(--backgroundColor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.sideBar{
+    width: 200px;
+    max-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    box-sizing: border-box;
+    padding: 30px 0px 16px 0px;
+}
+.companyLogoAndNavigationContainer{
+    width: 168px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 39px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.companyLogoImageIpad{
+    display: none;
+}
+.companyLogo{
+    width: 91px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companyLogoImage{
+    width: 91px;
+    height: 44px;
+    object-fit: cover;
+}
+.navigationItemsContainer{
+    row-gap: 10px;
+    width: 168px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigationItem{
+    width: 168px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondaryGrey);
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 4%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding-left: 28px;
+}
+.navigationItem:hover{
+    background-color: var(--secondaryContainer);
+}
+.navigationItem:nth-child(5){
+    background-color: var(--focusedSecondaryContainer);
+    color: var(--textColorWhite);
+}
+.navigationItemInsideContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    column-gap: 13px;
+}
+.icon-large{
+    font-size: 32px;
+}
+.icon-larger{
+    font-size: 48px;
+    cursor: pointer;
+}
+.accountProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 61px;
+    border-top: 2px solid var(--twentyTextFade);
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    column-gap: 8px;
+    background-color: var(--backgroundColor);
+    cursor: pointer;
+}
+.accountProfilePictureContainer{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.accountProfilePicture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.accountUsername{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--usernameTextColor);
+    width: 86px;
+    height: 19px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.mainPageContainer{
+    width: calc(100% - 200px);
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 4vh;
+    row-gap: 42px;
+}
+.allItemsForTrendingPageContainer{
+    width: 1039px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    row-gap: 32px;
+}
+.trendingPageSearchParametersAndChangeLanguageContainer{
+    width: 1035px;
+    height: 107px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    row-gap: 25px;
+}
+.trendingPageSearchParametersContainer{
+    width: 1035px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.trendingPageSearchBarContainer{
+    width: 809px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 24px;
+    padding-left: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    border: 2px solid var(--twentyTextFade);
+}
+.searchBar{
+    width: 262px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 2%;
+}
+.changeLanguageContainer{
+   width: 176px;
+   height: 50px;
+   background-color: var(--textColorWhite);
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 6px;
+   margin: 0;
+   box-sizing: border-box;
+   cursor: pointer;
+}
+
+.changeLanguageGlobeIcon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: var(--textColorWhite);
+    border-radius: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+}
+.changeLanguageText{
+    width: 56px;
+    height: 18px;
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    box-sizing: border-box;
+}
+
+.filterByOverAllOrDateRangesContainer{
+    width: 1035px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.trendingTitleText{
+    width: 79px;
+    height: 32px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.overallTrendingFilterText{
+    width: 95px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--textColorWhite);
+    border: 1px solid black;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: "Inter";
+    font-weight: 600;
+    line-height: 32px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.overPastMonthTrendingFilterText{
+    width: 170px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--textColorWhite);
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    margin: 0;
+    border: 1px solid var(--borderColor);
+    margin-right: 10px;
+    cursor: pointer;
+}
+.overPastWeekTrendingFilterText{
+    width: 155px;
+    height: 32px;   
+    border-radius: 100px;
+    border: 1px solid var(--borderColor);
+    background-color: var(--textColorWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 350px;
+    cursor: pointer;
+}
+
+
+.filterByContainer{
+    width: 166px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: var(--textColorWhite);
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: 1px solid black;
+    padding-left: 12px;
+    cursor: pointer;
+}
+.filterByText{
+    width: 95px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Inter";
+    font-size: 16;
+    font-weight: 400;
+    letter-spacing: 4%;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.trendingPageSavedItemsContainer{
+    width: 1039px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+.trendingItemContainer{
+    width: 244px;
+    height: 414px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--textColorWhite);
+    margin: 0;
+    box-sizing: border-box;
+}
+.trendingItemImage{
+    width: 244px;
+    height: 258px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    margin: 0;
+    box-sizing: border-box;
+}
+.trendingProductDetailsContainer{
+    width: 244px;
+    height: 156px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productNameAndPriceContainer{
+    width: 244px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productNameAndPrice{
+    width: 195px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 9px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productName{
+    width: 176px;
+    height: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.46px;
+    line-height: 22px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productPrice{
+    width: 195px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--productPriceGrey);
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 24px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.productBuyNow{
+    width: 244px;
+    height: 82px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+}
+.buyNowButton{
+    width: 155px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    cursor: pointer;    
+}
+.icon-cursor{
+    cursor: pointer;
+}
+@media only screen and (min-width: 1074px) and (max-width: 1210px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1074px) {
+    .sideBar{
+        width: 70px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 32px;
+        height: 51px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+    .allItemsForTrendingPageContainer{
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        box-sizing: border-box;
+        row-gap: 42px;
+    }
+    .trendingPageSearchParametersAndChangeLanguageContainer{
+        width: 440px;
+        height: 129px;
+        row-gap: 16px;
+    }
+    .trendingPageSearchParametersContainer{
+        width: 440px;
+        height: 33px;
+        row-gap: 0px;
+
+    }
+    .trendingPageSearchBarContainer{
+        width: 377px;
+        height: 33px;
+        display: flex;
+        margin: 0;
+        padding-right: 16px;
+        padding-left: 0px;
+        box-sizing: border-box;
+        border-radius: 40px;
+        border: 2px solid var(--twentyTextFade);
+    }
+    .searchBar{
+        width: 200px;
+        height: 19px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        box-sizing: border-box;
+        font-family: "Roboto";
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2%;
+    }
+    .changeLanguageContainer{
+        width: 33px;
+        height: 33px;      
+        column-gap: 0px;
+    }
+    .changeLanguageGlobeIcon{
+        width: 33px;
+        height: 33px;
+        border-radius: 8px;
+        font-size: 28px;
+    }
+    .changeLanguageText{
+        display: none;
+    }
+    .fa-language{
+        display: none;
+    }
+    .filterByOverAllOrDateRangesContainer{
+        width: 440px;
+        height: 80px;
+        margin: 0;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+    .trendingTitleText{
+        display: none;
+    }
+    .overPastWeekTrendingFilterText{
+        margin-right: 0px;
+    }
+    
+    .filterByContainer{
+        width: 166px;
+        height: 32px;
+        border-radius: 100px;
+        border: 1px solid black;
+        padding-left: 16px;
+        cursor: pointer;
+    }
+    .filterByText{
+        width: 104px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: "Inter";
+        font-size: 16;
+        font-weight: 400;
+        letter-spacing: 4%;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+    .trendingPageSavedItemsContainer{
+        width: 520px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 32px;
+        row-gap: 32px;
+    }
+    .trendingItemContainer{
+        width: 244px;
+        height: 414px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--textColorWhite);
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .trendingItemImage{
+        width: 244px;
+        height: 258px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .trendingProductDetailsContainer{
+        width: 244px;
+        height: 156px;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productNameAndPriceContainer{
+        width: 244px;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productNameAndPrice{
+        width: 195px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 9px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productName{
+        width: 176px;
+        height: 22px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: "Roboto";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.46px;
+        line-height: 22px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productPrice{
+        width: 195px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: var(--productPriceGrey);
+        font-family: "Roboto";
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 24px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productBuyNow{
+        width: 244px;
+        height: 82px;
+        padding-right: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .buyNowButton{
+        width: 155px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Roboto";
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 4px;
+        font-weight: 700;
+        cursor: pointer;    
+    }
+    .icon-cursor{
+        cursor: pointer;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .mediumDisplayNone{
+        display: flex;
+    }
+    .sideBar{
+        width: 66px;
+        padding: 10px 0px 4px 0px;
+    }
+    .companyLogoAndNavigationContainer{
+        width: 70px;
+    }
+    .companyLogoImageIpad{
+        display: flex;
+        width: 24px;
+        height: 36.5px;
+        object-fit: cover;
+    }
+    .companyLogoImage{
+        display: none;
+    }
+    .navigationItemsContainer{
+        row-gap: 10px;
+        width: 70;
+    }
+    .sideBarNavigationText{
+        display: none;
+    }
+    .navigationItem{
+        width: 50px;
+        justify-content: center;
+        column-gap: 0px;
+        padding-left: 0px;
+    }
+    .accountProfileContainer{
+        width: 50px;
+        height: 50px;
+        column-gap: 0px;
+    }
+    .accountProfilePictureContainer{
+        width: 32px;
+        height: 32px;
+    }
+    .accountUsername{
+        display: none;
+    }
+
+    .mainPageContainer{
+        width: calc(100% - 70px);
+    }
+
+    .allItemsForTrendingPageContainer{
+        width: 251px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        box-sizing: border-box;
+        row-gap: 36px;
+    }
+    .trendingPageSearchParametersAndChangeLanguageContainer{
+        width: 251px;
+        height: 110px;
+        row-gap: 16px;
+    }
+    .trendingPageSearchParametersContainer{
+        width: 251px;
+        height: 30px;
+        row-gap: 0px;
+        column-gap: 21px;
+
+    }
+    .trendingPageSearchBarContainer{
+        width: 251px;
+        height: 30px;
+        display: flex;
+        margin: 0;
+        box-sizing: border-box;
+        border-radius: 40px;
+        border: 2px solid var(--twentyTextFade);
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+
+    .searchBar{
+        width: 146px;
+        height: 12px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        box-sizing: border-box;
+        font-family: "Roboto";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 2%;
+    }
+    .changeLanguageContainer{
+        width: 30px;
+        height: 30px;
+        column-gap: 0px;
+    }
+    .changeLanguageGlobeIcon{
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        font-size: 26px;
+    }
+    .changeLanguageText{
+        display: none;
+    }
+    .fa-language{
+        display: none;
+    }
+    .filterByOverAllOrDateRangesContainer{
+        width: 244px;
+        height: 64px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .trendingTitleText{
+        display: none;
+    }
+    .overallTrendingFilterText{
+        height: 28px;
+        font-size: 12px;
+        margin-right: 14px;
+    }
+    .overPastMonthTrendingFilterText{
+        width: 135px;
+        height: 28px;
+        
+
+        font-size: 12px;
+        margin: 0;
+        margin-right: 0px;
+    }
+    .overPastWeekTrendingFilterText{
+        width: 135px;
+        height: 28px;   
+        font-size: 12px;
+        margin-right: 14px;
+    }
+
+    .icon-small-screen{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .icon-small-screen-two{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: 24px;
+    }
+    .icon-smaller-screen{
+        font-size: 18px;
+        margin-left: -20px;
+    }
+    .filterByContainer{
+        width: 95px;
+        height: 28px;
+        padding-left: 4px;
+        cursor: pointer;
+    }
+    .filterByText{
+        width: 58px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: "Inter";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 4%;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+    .trendingPageSavedItemsContainer{
+        width: 249px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 0px;
+        row-gap: 32px;
+    }
+    .trendingItemContainer{
+        width: 244px;
+        height: 414px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--textColorWhite);
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .trendingItemImage{
+        width: 244px;
+        height: 258px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .trendingProductDetailsContainer{
+        width: 244px;
+        height: 156px;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productNameAndPriceContainer{
+        width: 244px;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productNameAndPrice{
+        width: 195px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 9px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productName{
+        width: 176px;
+        height: 22px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: "Roboto";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.46px;
+        line-height: 22px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productPrice{
+        width: 195px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: var(--productPriceGrey);
+        font-family: "Roboto";
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 24px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .productBuyNow{
+        width: 244px;
+        height: 82px;
+        padding-right: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .buyNowButton{
+        width: 155px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Roboto";
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 4px;
+        font-weight: 700;
+        cursor: pointer;    
+    }
+    .icon-cursor{
+        cursor: pointer;
+    }
+}

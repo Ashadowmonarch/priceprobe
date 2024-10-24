@@ -1,0 +1,6 @@
+Django==5.0.1
+psycopg2-binary==2.9.6
+whitenoise==6.4.0
+selenium==4.10.0
+pillow
+redis

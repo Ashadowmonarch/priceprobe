@@ -1,0 +1,25 @@
+# Python specific
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.env
+*.venv
+.env
+
+# Django specific
+db.sqlite3
+/staticfiles/
+/media/
+
+# MacOS specific
+.DS_Store
+
+# Ignore migrations
+*/migrations/*
+
+# VS Code
+.vscode/
+
+# Git specific
+.git

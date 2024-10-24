@@ -1,0 +1,328 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="{% static 'mainApp/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/css/trendingPage.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo:wght@100..900&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/74a08d3ece.js" crossorigin="anonymous"></script>
+
+    <title>PriceProbe</title>
+    <style>
+         a{
+            text-decoration: none;
+            color: black;
+        }
+        .buyNowButton{
+            background-color: transparent;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .icon-small{
+            font-size: 12px;
+        }
+        .icon-medium{
+            font-size: 20px;
+        }
+        .icon-large{
+            font-size: 32px;
+        }
+        .icon-larger{
+            font-size: 48px;
+            cursor: pointer;
+        }
+        .icon-cursor{
+            cursor: pointer;
+        }
+        .searchBar{
+            width: calc(100% - 20px);
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            box-sizing: border-box;
+            font-family: "Roboto";
+            font-size: 21px;
+            font-weight: 400;
+            letter-spacing: 2%;
+            padding-left: 24px;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+        .searchBarForm{
+            height: 100%;
+            width: 100%;
+        }
+        .changeLanguageGlobeIcon{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: var(--textColorWhite);
+            border-radius: 16px;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 32px;
+        }
+        .accountProfilePicture{
+            border-radius: 50%;
+        }
+        .trendingItemImage{
+            object-fit: contain;
+        }
+        .trendingPageSearchBarContainer{
+            width: 809px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 24px;
+            padding-left: 0px;
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: 40px;
+            border: 2px solid var(--twentyTextFade);
+        }
+        @media only screen and (min-width: 601px) and (max-width: 1074px) {
+            .fa-language{
+                display: none;
+            }
+            .changeLanguageGlobeIcon{
+                width: 33px;
+                height: 33px;
+                border-radius: 8px;
+                font-size: 28px;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .fa-language{
+                display: none;
+            }
+            .changeLanguageGlobeIcon{
+                width: 30px;
+                height: 30px;
+                border-radius: 8px;
+                font-size: 26px;
+            }
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sideBar">
+        <div class="companyLogoAndNavigationContainer">
+            <div class="companyLogo">
+                <img class="companyLogoImage" src="{% static 'mainApp/images/sideBarCompanyLogo.png' %}" alt="Company Logo">
+                <img class="companyLogoImageIpad" src="{% static 'mainApp/images/companyLogoSingleLetter.png' %}" alt="Company Logo">
+            </div>
+    
+            <div class="navigationItemsContainer">
+                <a class="navigationItem" href="{% url 'dashboardPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            team_dashboard
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Dashboard
+                        </p>
+                        
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'searchPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            search
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Search
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'accountPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            person
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Account
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'savedPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            bookmark
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Saved
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'trendingPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            local_fire_department
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Trending
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'notificationsPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            notifications
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Notifcations
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem"  href="{% url 'helpPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            help
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Help
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="{% url 'accountPage' %}">
+            <div class="accountProfileContainer">
+                <div class="accountProfilePictureContainer">
+                    <img class="accountProfilePicture" src="{{ currentUser.profilePicture.url }}" alt="Profile Picture">
+                </div>
+                <p class="accountUsername">
+                    {{currentUser.username}}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="mainPageContainer">
+        <div class="allItemsForTrendingPageContainer">
+
+            <div class="trendingPageSearchParametersAndChangeLanguageContainer">
+                <div class="trendingPageSearchParametersContainer">
+                    <div class="trendingPageSearchBarContainer">
+                        <form class="searchBarForm" method="post">
+                            {% csrf_token %}
+                            {{ trendingPageSearch.trendingPageSearchBar }}
+                        </form>
+                        <span class="material-symbols-outlined icon-small-screen">
+                            search
+                        </span>
+                    </div>
+                    <div class="changeLanguageContainer">
+                        <span class="material-symbols-outlined changeLanguageGlobeIcon">
+                            language
+                        </span>
+                        <p class="changeLanguageText">
+                            Change
+                        </p>
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                </div>
+
+                <div class="filterByOverAllOrDateRangesContainer">
+                    <p class="trendingTitleText">
+                        Trending
+                    </p>
+                    <p class="overallTrendingFilterText">
+                        Overall
+                    </p>
+                    <p class="overPastMonthTrendingFilterText">
+                        Over past month
+                    </p>
+                    <p class="overPastWeekTrendingFilterText">
+                        Over last week
+                    </p>
+                    <div class="filterByContainer">
+                        <p class="filterByText">
+                            Filter by
+                        </p>
+                        <span class="material-symbols-outlined icon-larger icon-small-screen-two">
+                            arrow_drop_down
+                        </span>
+                    </div>
+                </div>    
+            </div>
+
+            <div class="trendingPageSavedItemsContainer">
+                {% for trendingItem in displayedItems %}
+                    <div class="trendingItemContainer">
+                        <img class="trendingItemImage" src="{{ trendingItem.productImage }}" alt="Saved Product">
+
+                        <div class="trendingProductDetailsContainer">
+        
+                            <div class="productNameAndPriceContainer">
+        
+                                <div class="productNameAndPrice">
+                                    <p class="productName">
+                                        {{ trendingItem.productHeaderText | truncatechars_html:20 }}
+                                    </p>
+                                    <p class="productPrice">
+                                        {% if trendingItem.productPrice == "Unavailable" %}
+                                            {{ trendingItem.productPrice }}
+                                        {% else %}
+                                            ${{ trendingItem.productPrice }}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <div class="productMoreDetails">
+                                    <span class="material-symbols-outlined icon-large product-icon">
+                                        more_vert
+                                    </span>
+                                </div>
+        
+                            </div>
+                            <div class="productBuyNow">
+                                <form method="post" target="_blank">
+                                    {% csrf_token %}
+                                    <button type="submit" class="buyNowButton" value="{{ trendingItem.productLink }}" name="buyNowButton">
+                                        BUY NOW
+                                    </button>
+                                </form>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" name="saveProduct">
+                                        {% if currentUser in trendingItem.users.all  %}
+                                            <i class="fa-solid fa-bookmark fa-2x icon-cursor"></i>
+                                        {% else %}
+                                            <i class="fa-regular fa-bookmark fa-2x icon-cursor"></i>
+                                        {% endif %}
+                                    </button>
+                                    <input type="text" style="display: none;" name="productHeaderText" value="{{ trendingItem.productHeaderText }}">
+                                    <input type="text" style="display: none;" name="productPrice" value="{{ trendingItem.productPrice }}">
+                                    <input type="text" style="display: none;" name="productLink" value="{{ trendingItem.productLink }}">
+                                    <input type="text" style="display: none;" name="productImage" value="{{ trendingItem.productImage }}">
+                                    <input type="text" style="display: none;" name="isProductSaved" value="{{ trendingItem.isProductSaved }}">
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

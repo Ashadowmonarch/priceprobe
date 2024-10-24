@@ -1,0 +1,407 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'mainApp/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/css/notificationsPage.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Heebo:wght@100..900&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/74a08d3ece.js" crossorigin="anonymous"></script>
+
+    <title>PriceProbe</title>
+    <style>
+        .icon-small{
+            font-size: 12px;
+        }
+        .icon-medium{
+            font-size: 20px;
+        }
+        .icon-large{
+            font-size: 32px;
+        }
+        .icon-larger{
+            font-size: 48px;
+            cursor: pointer;
+        }
+        .accountProfilePicture{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sideBar">
+        <div class="companyLogoAndNavigationContainer">
+            <div class="companyLogo">
+                <img class="companyLogoImage" src="{% static 'mainApp/images/sideBarCompanyLogo.png' %}" alt="Company Logo">
+                <img class="companyLogoImageIpad" src="{% static 'mainApp/images/companyLogoSingleLetter.png' %}" alt="Company Logo">
+            </div>
+    
+            <div class="navigationItemsContainer">
+                <a class="navigationItem" href="{% url 'dashboardPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            team_dashboard
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Dashboard
+                        </p>
+                        
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'searchPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            search
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Search
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'accountPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            person
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Account
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'savedPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            bookmark
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Saved
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'trendingPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            local_fire_department
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Trending
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem" href="{% url 'notificationsPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            notifications
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Notifcations
+                        </p>
+                    </div>
+                </a>
+                <a class="navigationItem"  href="{% url 'helpPage' %}">
+                    <div class="navigationItemInsideContainer">
+                        <span class="material-symbols-outlined icon-large">
+                            help
+                        </span>
+                        <p class="sideBarNavigationText">
+                            Help
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="{% url 'accountPage' %}">
+            <div class="accountProfileContainer">
+                <div class="accountProfilePictureContainer">
+                    <img class="accountProfilePicture" src="{{ currentUser.profilePicture.url }}" alt="Profile Picture">
+                </div>
+                <p class="accountUsername">
+                    {{currentUser.username}}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="mainPageContainer">
+        <div class="notificationsPageAllItemsContainer">
+            <div class="notificationsPageHeaderAndSubHeaderTextContainer">
+                <p class="notificationsPageHeaderText">
+                    Notifications
+                </p>
+                <p class="notificationsPageSubHeaderText">
+                    Stay informed and up-to-date with the latest updates, 
+                    deals, and messages tailored just for you.
+                </p>
+            </div>
+            <div class="allNotificationsContainer">
+                <nav class="notificationsContainerNavBar">
+                    <p class="navBarItemName">
+                        Item name
+                    </p>
+                    <p class="navBarItemType">
+                        Item type
+                    </p>
+                    <p class="navBarNotification">
+                        Notification
+                    </p>
+                    <p class="navBarPercentage">
+                        Percentage
+                    </p>
+                </nav>
+                <div class="allNotificationItemsContainer">
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+                    <div class="notificationItem">
+                        <p class="productNotificationName">
+                            Raspberry PI 
+                        </p>
+                        <p class="productNotificationType">
+                            Electronics
+                        </p>
+                        <p class="productNotificationPriceTrend">
+                            Price increase
+                        </p>
+                        <div class="productNotificationPercentageContainer">
+                            <div class="half-size-icon">
+                                <i class="fa-solid fa-up-long fa-"></i>
+                            </div>
+                            <p class="productNotificationPercentageText">
+                                10%
+                            </p>
+                        </div>
+                        <p class="productNotificationRemoveText">
+                            Remove
+                        </p>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
